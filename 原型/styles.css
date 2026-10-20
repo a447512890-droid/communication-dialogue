@@ -474,3 +474,5 @@
 .practice-microphone{display:flex;align-items:center;justify-content:center;gap:5px;margin-top:6px;color:var(--muted)}.practice-microphone small{font-size:11px;max-width:190px;overflow-wrap:anywhere}.practice-microphone button{font-size:11px;min-height:36px;padding:4px}.practice-microphone-hint{font-size:11px;line-height:1.5;color:#9a6535;margin:5px 0}.transcript-open .practice-call-identity{padding-top:2px}
 
 .practice-mode-options{margin:0 0 20px;padding:16px;border:1px solid var(--border,#d7e5e3);border-radius:16px;background:#fff}.practice-mode-options>div{display:flex;gap:10px;margin-top:12px}.practice-mode-options>div button{flex:1;min-width:0}.practice-mode-options p{margin-bottom:0}
+
+.journey .practice-mode-options{margin:14px 0;padding:12px}.journey .practice-mode-options>div{flex-direction:column;gap:8px}.journey .practice-mode-options button{font-size:13px;min-height:38px;padding:8px}.journey .practice-mode-options strong{font-size:13px}.journey .practice-mode-options .helper-text{font-size:11px;line-height:1.6}
