@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7f4">
+  <title>Qwen AI 商务陪练 Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Qwen AI 商务陪练"><span class="brand-icon">练</span><span><strong>商务电话陪练</strong><small>Qwen 实时语音 Demo</small></span></a>
+      <span class="demo-tag"><i></i> 本地演示</span>
+    </header>
+
+    <section class="intro">
+      <span class="eyebrow">AI ROLEPLAY · REALTIME VOICE</span>
+      <h1>把重要的电话，<br>先练一遍。</h1>
+      <p>设定沟通目标，和 AI 扮演的对方进行语音对练。结束后可以查看本次对话文本。</p>
+    </section>
+
+    <section class="config-card" id="setup-card">
+      <div class="section-heading"><div><span class="step">01</span><h2>设置本次演练</h2></div><span class="setup-status" id="config-status">正在检查服务配置…</span></div>
+      <div class="field-grid">
+        <label class="field"><span>沟通场景</span><select id="scenario"><option value="退款协商">退款协商</option><option value="商务报价">商务报价</option><option value="客户跟进">客户跟进</option><option value="求职面试">求职面试</option><option value="custom">自定义场景</option></select></label>
+        <label class="field"><span>对方角色</span><input id="role" value="售后客服" maxlength="60" placeholder="例如：采购经理"></label>
+        <label class="field field-wide"><span>我的沟通目标</span><input id="goal" value="商品有质量问题，希望协商退款" maxlength="240" placeholder="这通电话希望达成什么？"></label>
+        <label class="field field-wide"><span>背景与已知信息</span><textarea id="background" rows="3" maxlength="800" placeholder="提供必要事实。不要填入不希望发送给 AI 的敏感信息。">商品收到三天，存在质量问题，已有照片。订单金额为680元。</textarea></label>
+        <label class="field"><span>期望结果</span><input id="expected" value="确认退款条件、处理时限和到账时间" maxlength="240"></label>
+        <label class="field"><span>沟通难度</span><select id="difficulty"><option>正常沟通</option><option>较多异议</option><option>友好配合</option></select></label>
+      </div>
+      <div class="privacy-note"><span>ⓘ</span><span>开始后，麦克风语音会实时发送给千问 AI 平台的 Qwen 服务用于本次对练。Demo 不保存音频或对话记录。</span></div>
+      <button class="primary-button" id="start-btn" disabled><span>开始语音对练</span><span aria-hidden="true">↗</span></button>
+      <p class="config-help" id="config-help">请先在本地配置百炼 API Key 和业务空间 ID。</p>
+    </section>
+
+    <section class="practice-card hidden" id="practice-card">
+      <div class="practice-top"><div><span class="step">02</span><h2>角色对练</h2></div><span class="connection-state" id="connection-state"><i></i><span>准备连接</span></span></div>
+      <div class="scenario-summary" id="scenario-summary"></div>
+      <p class="connection-detail" id="connection-detail">正在准备连接…</p>
+      <div class="conversation" id="conversation" aria-live="polite"><div class="empty-conversation"><span class="sound-mark">〰</span><strong>连接成功后，开始说出你的开场白</strong><small>AI 会根据场景扮演对方，并用语音回应</small></div></div>
+      <div class="practice-controls"><div class="mic-indicator" id="mic-indicator"><span class="mic-wave"><i></i><i></i><i></i><i></i><i></i></span><span id="mic-label">麦克风待开启</span></div><button class="end-button" id="end-btn" disabled><span class="end-square"></span>结束演练</button></div>
+      <p class="footnote">请在浏览器允许麦克风访问。连接和语音质量取决于网络及千问 AI 平台账号配置。</p>
+    </section>
+
+    <section class="result-card hidden" id="result-card">
+      <div class="result-heading"><span class="result-icon">✓</span><div><span class="step">03</span><h2>本次对话</h2></div></div>
+      <p class="result-desc">以下是实时语音服务返回的对话文本，方便快速回顾。</p>
+      <div class="result-transcript" id="result-transcript"></div>
+      <button class="secondary-button" id="again-btn">再练一次</button>
+    </section>
+
+    <footer><span>Qwen AI 商务陪练 · 技术验证 Demo</span><span>不发起真实电话，不提供正式服务</span></footer>
+  </main>
+  <audio id="remote-audio" autoplay></audio>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>

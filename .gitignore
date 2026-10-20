@@ -1,0 +1,23 @@
+.DS_Store
+._*
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.log
+*.tmp
+*.swp
+~$*
+.env
+.env.*
+!.env.example
+.pages/
+
+# 本地 API 密钥文档
+/相关API Key.local.md
+
+# Local reference and process records
+/docs/历史资料/
+/docs/核对清单/
+/docs/协作规范/
+/docs/产品需求/文档一致性清理结果.md

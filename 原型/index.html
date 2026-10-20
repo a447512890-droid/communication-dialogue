@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#edf7f5">
+  <title>打电话-AI商务实时电话沟通训练官 · 需求原型</title>
+  <link rel="stylesheet" href="styles.css?v=20261020-microphone-selection">
+</head>
+<body>
+  <div class="shell">
+
+    <div class="workspace-grid">
+      <aside class="journey" aria-label="原型导航">
+        <div class="doc-brand"><span>PRODUCT MAP</span><strong>商务电话训练 · 需求原型</strong></div>
+        <nav id="journey-nav" class="journey-nav" aria-label="页面导航"></nav>
+      </aside>
+
+      <main class="stage" id="main-content">
+        <div class="stage-header"><div><span class="eyebrow" id="stage-kicker">演练 / 演练</span><h2 id="stage-title">演练</h2><p id="stage-description">按目的准备，按场景练习。</p></div></div>
+        <div id="document-content" class="document-content" aria-live="polite"></div>
+        <div id="workspace-state-tabs" class="workspace-state-tabs-host" aria-label="原型状态切换"></div>
+        <div class="phone-wrap"><div class="phone-frame"><div class="phone-screen"><div class="phone-status" aria-hidden="true"><span>9:41</span><span class="dynamic-island"></span><span class="status-icons">●●● ▰</span></div><div id="phone-content" class="phone-content"></div><div class="home-indicator" aria-hidden="true"></div></div></div></div>
+      </main>
+
+      <aside class="spec-panel" id="spec-panel" aria-hidden="true" inert aria-label="需求说明"><div class="spec-top"><div><span class="eyebrow">REQUIREMENT NOTES</span><h2>需求说明</h2></div><button type="button" class="spec-close" data-action="close-spec" aria-label="关闭需求说明">×</button></div><div id="spec-module-list" class="spec-module-list"></div><div id="spec-detail" class="spec-detail"></div></aside>
+    </div>
+  </div>
+  <div id="modal-root"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="input-rules.js?v=20261020-microphone-selection"></script>
+  <script src="requirements-live.js?v=20261020-microphone-selection"></script>
+  <script src="realtime.js?v=20261020-microphone-selection"></script>
+  <script src="app.js?v=20261020-microphone-selection"></script>
+</body>
+</html>
