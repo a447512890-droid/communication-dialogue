@@ -5,7 +5,7 @@ window.requirementsLoadState = { loaded: false, error: '' };
 (() => {
   let pending = null;
   let lastSource = null;
-  const fields = ['标题', '功能说明', '模块说明', '数据来源', '前置条件', '后置结果', '显示数量限制', '排序规则'];
+  const fields = ['标题', '功能说明', '模块说明', '数据来源', '技术参考实现方案', '前置条件', '后置结果', '显示数量限制', '排序规则'];
   function parse(source) {
     const result = Object.create(null);
     for (const block of source.replace(/\r\n?/g, '\n').split(/^## /m).slice(1)) {
