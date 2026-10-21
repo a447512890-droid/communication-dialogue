@@ -500,3 +500,13 @@
 
 /* 网页仅示意系统联系人选择器；iOS使用ContactsUI系统原生界面。 */
 .ios-contact-picker{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","PingFang SC",sans-serif;background:#fff}.ios-picker-nav{height:56px;background:#f9f9f9;border-bottom:1px solid #c6c6c8}.ios-picker-nav>strong{font-weight:600;letter-spacing:0}.ios-picker-search{margin:10px 16px 12px;border-radius:10px;background:#eeeeef;min-height:36px}.ios-picker-contact{min-height:72px}.ios-picker-contact:active{background:#e5e5ea}.ios-picker-section{font-size:13px;font-weight:500;letter-spacing:0;color:#6d6d72;background:#f2f2f7}
+
+.binding-code-row{display:flex;gap:8px;align-items:center}.binding-code-row input{min-width:0;flex:1}.binding-code-row button{flex:none;font-size:12px;white-space:nowrap}
+
+.binding-entry-status{display:flex;align-items:center;gap:7px;color:var(--muted);font-size:13px}
+
+.settings-region .settings-list>button[data-action="open-phone-binding"]{appearance:none;-webkit-appearance:none;display:flex;align-items:center;justify-content:space-between;width:100%;min-height:58px;margin:0;padding:17px 15px;border:0;border-bottom:1px solid var(--border);border-radius:0;background:#fff;color:var(--ink);font-size:14px;text-align:left;gap:16px}.settings-region .settings-list>button[data-action="open-phone-binding"]:active{background:#edf5f1}.settings-region .settings-list>button[data-action="open-phone-binding"]>span:first-child{font-weight:500;white-space:nowrap}.settings-region .settings-list>button[data-action="open-phone-binding"] .binding-entry-status{margin-left:auto;gap:9px;white-space:nowrap;font-size:13px;font-variant-numeric:tabular-nums}.binding-entry-status svg{width:18px;height:18px;color:#627b80}
+
+#binding-phone:disabled{opacity:1;-webkit-text-fill-color:var(--muted);color:var(--muted);background:#eef3f1;border-color:var(--border);cursor:default}
+
+.practice-home .practice-scene-tile{min-height:88px;padding:13px 14px;gap:8px;border-radius:16px}.practice-home .scene-tile-icon{width:27px;height:27px;border-radius:8px}.practice-home .scene-tile-icon svg{width:18px;height:18px}.practice-home .practice-scene-tile strong{font-size:14px}.practice-home .practice-scene-tile>svg{bottom:16px;right:12px;width:14px;height:14px}.practice-scene-subtitle{font-size:13px;color:var(--muted);margin:8px 0 16px}.practice-home .practice-scene-tiles{gap:10px}
