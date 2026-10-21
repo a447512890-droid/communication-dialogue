@@ -510,3 +510,5 @@
 #binding-phone:disabled{opacity:1;-webkit-text-fill-color:var(--muted);color:var(--muted);background:#eef3f1;border-color:var(--border);cursor:default}
 
 .practice-home .practice-scene-tile{min-height:88px;padding:13px 14px;gap:8px;border-radius:16px}.practice-home .scene-tile-icon{width:27px;height:27px;border-radius:8px}.practice-home .scene-tile-icon svg{width:18px;height:18px}.practice-home .practice-scene-tile strong{font-size:14px}.practice-home .practice-scene-tile>svg{bottom:16px;right:12px;width:14px;height:14px}.practice-scene-subtitle{font-size:13px;color:var(--muted);margin:8px 0 16px}.practice-home .practice-scene-tiles{gap:10px}
+
+.review-home-new{padding:12px 18px;background:#f6f9f7}.review-home-new .module-link{right:24px;top:4px}

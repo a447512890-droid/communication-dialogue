@@ -16,7 +16,8 @@ window.requirementsLoadState = { loaded: false, error: '' };
       const note = Object.create(null);
       matches.forEach((match, i) => {
         const content = body.slice(match.index + match[0].length, matches[i + 1]?.index ?? body.length);
-        const value = (match[2] + '\n' + content).trim();
+        // Headings and separators terminate a field; supplementary sections are not field values.
+        const value = (match[2] + '\n' + content).split(/^#{1,6}\s+|^\s*(?:---+|\*\*\*+)\s*$/m)[0].trim();
         if (match[1] !== '数据来源' || !value.includes('|')) { note[match[1]] = value; return; }
         const rows = value.split('\n').filter(line => /^\s*\|/.test(line)).map(line => line.trim().replace(/^\||\|$/g, '').split('|').map(cell => cell.trim()));
         const headers = rows.shift() || [];
