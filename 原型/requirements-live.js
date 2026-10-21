@@ -1,6 +1,5 @@
 // Read the Markdown source directly; no generated data file is required.
 window.REQUIREMENTS = Object.create(null);
-window.REQUIREMENTS_COMMON_RULES = '';
 window.requirementsLoadState = { loaded: false, error: '' };
 (() => {
   let pending = null;
@@ -37,7 +36,7 @@ window.requirementsLoadState = { loaded: false, error: '' };
         if (!response.ok) throw new Error(`读取需求说明.md失败（${response.status}）`);
         const source = await response.text();
         const changed = source !== lastSource || !!window.requirementsLoadState.error;
-        if (source !== lastSource) { window.REQUIREMENTS = parse(source); window.REQUIREMENTS_COMMON_RULES = source.replace(/\r\n?/g, '\n').match(/^## 通用规则\n([\s\S]*?)(?=^## |$(?![\s\S]))/m)?.[1]?.trim() || ''; lastSource = source; }
+        if (source !== lastSource) { window.REQUIREMENTS = parse(source);  lastSource = source; }
         window.requirementsLoadState = { loaded: true, error: '' };
         if (changed) window.dispatchEvent(new Event('requirements-updated'));
       } catch (error) {
