@@ -512,3 +512,25 @@
 .practice-home .practice-scene-tile{min-height:88px;padding:13px 14px;gap:8px;border-radius:16px}.practice-home .scene-tile-icon{width:27px;height:27px;border-radius:8px}.practice-home .scene-tile-icon svg{width:18px;height:18px}.practice-home .practice-scene-tile strong{font-size:14px}.practice-home .practice-scene-tile>svg{bottom:16px;right:12px;width:14px;height:14px}.practice-scene-subtitle{font-size:13px;color:var(--muted);margin:8px 0 16px}.practice-home .practice-scene-tiles{gap:10px}
 
 .review-home-new{padding:12px 18px;background:#f6f9f7}.review-home-new .module-link{right:24px;top:4px}
+
+/* Wider requirement notes with wrapping tables; narrow layouts stay in document flow. */
+.workspace-grid.spec-open{grid-template-columns:220px minmax(438px,1fr) clamp(480px,36vw,560px)}
+.spec-panel{min-width:0;overflow-x:hidden}
+.spec-source-wrap{overflow-x:visible}
+.spec-source-table{min-width:0;width:100%;table-layout:fixed}
+.spec-source-table th,.spec-source-table td{white-space:normal;overflow-wrap:anywhere;word-break:normal;vertical-align:top}
+.spec-source-table th:first-child{width:23%}
+.spec-source-table th:nth-child(2){width:35%}
+.spec-source-table th:nth-child(3){width:42%}
+.spec-row p{overflow-wrap:anywhere}
+@media(min-width:1201px){.spec-open .stage{padding-left:16px;padding-right:16px}}
+@media(max-width:1200px) and (min-width:721px){
+ .workspace-grid.spec-open{grid-template-columns:220px minmax(0,1fr)}
+ .spec-open .spec-panel{grid-column:2;position:static;top:auto;right:auto;width:100%;height:auto;max-height:none;box-shadow:none;border-top:1px solid var(--border)}
+}
+@media(max-width:720px){
+ .workspace-grid.spec-open{display:flex;flex-direction:column}
+ .spec-open .spec-panel{position:static;top:auto;right:auto;width:100%;height:auto;max-height:none;box-shadow:none;border-left:0;border-top:1px solid var(--border)}
+}
+
+.membership-benefits-title{margin:0 2px 10px;font-size:14px;font-weight:750;color:#112d32}
