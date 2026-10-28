@@ -544,3 +544,6 @@
 .review-source-divider{border-top:1px solid var(--border);margin:14px 0}
 
 .review-source-record{display:flex;align-items:center;justify-content:space-between;gap:10px}.review-source-record p{min-width:0}.review-source-record .ghost-button{flex:none;padding:6px;font-size:13px;color:var(--green)}
+
+/* 统一应用 Logo，保持原始图片比例 */
+img.app-brand-image{display:block;object-fit:contain;background:transparent;padding:0;flex-shrink:0}img.membership-logo.app-brand-image{border-radius:17px;box-shadow:none}.doc-brand-logo{display:block;object-fit:contain;border-radius:10px;margin-bottom:12px}

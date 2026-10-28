@@ -19,6 +19,7 @@ def main():
     target.mkdir(parents=True, exist_ok=True)
     files = [
         '原型/index.html', '原型/app.js', '原型/styles.css',
+        '原型/assets/app-logo.png',
         '原型/input-rules.js', '原型/realtime.js', '原型/requirements-live.js',
     ]
     files += [
